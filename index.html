@@ -7,113 +7,118 @@
 		<title>三翼工作室招募令</title>
 	</head>
 
-	<body>
-		<div class="sun">
-			<img src="img/sun.png" width="100%" />
-		</div>
-		<div class="sunShadow">
-			<img src="img/sun_shadow.png" width="100%" />
-		</div>
-		<div class="title">
-			三翼工作室招募令
-		</div>
-		<form action="" method="post">
-			<div class="faReform">
-				<div class="reformbg">
-
-				</div>
-				<div class="reform">
-					<div id="repeat">
-						<div id="putText">
-							姓名
-						</div>
-						<input type="text" id="name" name="name" />
-					</div>
-					<div id="repeat">
-						<div id="putSex">
-							性别
-						</div>
-						<div class="sexRadio">
-							<label class="radio">男<input type="radio" name="sex" id="sex" class="male" /><i></i></label>
-						</div>
-						<div class="sexRadio">
-							<label class="radio">女<input type="radio" name="sex" id="sex" class="female" /><i></i></label>
-						</div>
-					</div>
-					<div id="repeat">
-						<div id="putText">
-							手机
-						</div>
-						<input type="text" id="tel" name="tel" />
-					</div>
-					<div id="repeat">
-						<div id="putText">
-							Q Q
-						</div>
-						<input type="text" id="qq" name="qq" />
-					</div>
-					<div id="repeat">
-						<div id="putText">
-							院系
-						</div>
-						<!--<input type="text" id="yuan" name="yuan" />-->
-						<select name="yuan" id="yuan">
-							<option value="" disabled selected style='display:none;'>选择你的院系</option>
-							<option value="信息工程学院">信息工程学院</option>
-							<option value="法学院与知识产权学院">法学院与知识产权学院</option>
-							<option value="信用风险管理学院">信用风险管理学院</option>
-							<option value="计算机科学与数学学院">计算机科学与数学学院</option>
-							<option value="公共管理学院">公共管理学院</option>
-							<option value="兴湘学院">兴湘学院</option>
-							<option value="化学学院">化学学院</option>
-							<option value="材料工程学院">材料工程学院</option>
-						</select>
-					</div>
-					<div id="repeat">
-						<div id="putText">
-							专业
-						</div>
-						<input type="text" id="class" name="class" />
-					</div>
-					<div id="repeatMd1">
-						<select name="md1" id="md1">
-							<option value="">第一志愿</option>
-							<option value="1">技术开发部</option>
-							<option value="2">技术开发部</option>
-						</select>
-					</div>
-					<div id="repeatMd2">
-						<select name="md2" id="md2">
-							<option value="">第二志愿</option>
-							<option value="1">技术开发部不不不</option>
-							<option value="2">技术开发部</option>
-						</select>
-					</div>
-					<div id="repeatMd3">
-						<select name="md3" id="md3">
-							<option value="">第三志愿</option>
-							<option value="1">技术开发部</option>
-							<option value="2">技术开发部</option>
-						</select>
-					</div>
-					<div id="intro">
-						<textarea name="trod" id="trod" placeholder="用一句话来介绍你自己吧！"></textarea>
-					</div>
-					
-				</div>
-				<input type="submit" value="报名" id="sign" />
+	<body onload="getInsideArr()">
+		<div id="box">
+			<div class="sun">
+				<img src="img/sun.png" width="100%" />
 			</div>
-			
-		</form>
+			<div class="sunShadow">
+				<img src="img/sun_shadow.png" width="100%" />
+			</div>
+			<div class="title">
+				三翼工作室招募令
+			</div>
+			<form action="" method="post">
+				<div class="faReform">
+					<div class="reformbg">
+
+					</div>
+					<div class="reform">
+						<div id="repeat">
+							<div id="putText">
+								姓名
+							</div>
+							<input type="text" id="name" name="name" />
+						</div>
+						<div id="repeat">
+							<div id="putSex">
+								性别
+							</div>
+							<div class="sexRadio">
+								<label class="radio">男<input type="radio" name="sex" id="sex" class="male" /><i></i></label>
+							</div>
+							<div class="sexRadio">
+								<label class="radio">女<input type="radio" name="sex" id="sex" class="female" /><i></i></label>
+							</div>
+						</div>
+						<div id="repeat">
+							<div id="putText">
+								手机
+							</div>
+							<input type="text" id="tel" name="tel" />
+						</div>
+						<div id="repeat">
+							<div id="putText">
+								Q Q
+							</div>
+							<input type="text" id="qq" name="qq" />
+						</div>
+						<div id="repeat">
+							<div id="putText">
+								院系
+							</div>
+							<!--<input type="text" id="yuan" name="yuan" />-->
+							<select name="yuan" id="yuan">
+								<option value="" disabled selected style='display:none;'>选择你的院系</option>
+								<option value="信息工程学院">信息工程学院</option>
+								<option value="法学院与知识产权学院">法学院与知识产权学院</option>
+								<option value="信用风险管理学院">信用风险管理学院</option>
+								<option value="计算机科学与数学学院">计算机科学与数学学院</option>
+								<option value="公共管理学院">公共管理学院</option>
+								<option value="兴湘学院">兴湘学院</option>
+								<option value="化学学院">化学学院</option>
+								<option value="材料工程学院">材料工程学院</option>
+							</select>
+						</div>
+						<div id="repeat">
+							<div id="putText">
+								专业
+							</div>
+							<input type="text" id="class" name="class" />
+						</div>
+						<div id="repeatMd1">
+							<select name="md1" id="md1">
+								<option value="">第一志愿</option>
+								<option value="1">技术开发部</option>
+								<option value="2">技术开发部</option>
+							</select>
+						</div>
+						<div id="repeatMd2">
+							<select name="md2" id="md2">
+								<option value="">第二志愿</option>
+								<option value="1">技术开发部不不不</option>
+								<option value="2">技术开发部</option>
+							</select>
+						</div>
+						<div id="repeatMd3">
+							<select name="md3" id="md3">
+								<option value="">第三志愿</option>
+								<option value="1">技术开发部</option>
+								<option value="2">技术开发部</option>
+							</select>
+						</div>
+						<div id="intro">
+							<textarea name="trod" id="trod" placeholder="用一句话来介绍你自己吧！"></textarea>
+						</div>
+
+					</div>
+					<input type="submit" value="报名" id="sign" />
+				</div>
+
+			</form>
+		</div>
+
 		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 		<script type="text/javascript" src="js/jquery.js"></script>
 		<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript">
-		var HEIGHT = $('body').height();
-        $(window).resize(function() {
-            $('.main').height(HEIGHT);
-        });
-	</script>
+		<script type="text/javascript">
+			function getInsideArr(){
+var w=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+var h=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+document.getElementById("box").style.width=w+"px";
+document.getElementById("box").style.height=h+"px";
+};
+		</script>
 	</body>
 
 </html>
